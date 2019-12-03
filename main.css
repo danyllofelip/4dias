@@ -1,0 +1,142 @@
+body{
+    background: deepskyblue;
+    font-family: tahoma;
+}
+
+.total-wrap{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    margin: 25px auto;
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+    perspective: 1000px;
+}
+
+.total-wrap *{
+    transition: all 0.5s;
+}
+
+.total-wrap .btn-wrap{
+    position: relative;
+    background: hotpink;
+    color: white;
+    text-align: center;
+    z-index: 5;
+    width: 150px;
+    cursor: pointer;
+}
+
+.total-wrap .btn-wrap i{
+    font-size: 52px;
+    position: absolute;
+    top: 30px;
+    left: 35%;
+}
+
+.total-wrap .btn-wrap span{
+    display: block;
+    padding: 100px 0 34px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.total-wrap .cont-wrap{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    z-index: 4;
+}
+
+.total-wrap .cont-wrap h3{
+    position: relative;
+    background: rgba(0,0,0,0.4);
+    padding: 70px 0 30px 25px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 555;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.total-wrap .cont-wrap h3{
+  
+    bottom: 35px;
+    color: rgba(0,0,0,0.45);
+    text-shadow: none;
+}
+
+.total-wrap .dd-content{
+    padding: 25px;
+    padding-top: 35px;
+    line-height: 24px;
+    background: #f4f4f4;
+    margin-bottom: 25px;
+    transition-delay: 0s;
+    transform-origin: center top;
+    transition: rotateX(-180deg);
+    opacity: 0;
+}
+
+.total-wrap .dd-content p{
+    padding-bottom: 25px;
+    font-size: 14px;
+}
+
+.total-wrap.open{
+    width: 550px;
+    height: 717px;
+    transition-delay: 0;
+}
+
+.total-wrap.open .btn-wrap span:before,
+.total-wrap.open .btn-wrap span:after{
+    background: hotpink;
+}
+
+.total-wrap.open .cont-wrap{
+    z-index: -1;
+    background: #cc4d8c;
+    left: 150px;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.total-wrap.open .dd-content{
+    transform-origin: center top;
+    transform: rotateX(0deg);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.total-wrap .btn-wrap:hover i{
+    top: 20px;
+}
+
+.total-wrap .btn-wrap span:after,
+.total-wrap .btn-wrap span:before{
+    content: '';
+    display: block;
+    width: 0.1%;
+    opacity: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.total-wrap .btn-wrap span:before{
+    bottom: 55px;
+    right: 0;
+    left: auto;
+}
+
+.total-wrap .btn-wrap:hover span:afeter,
+.total-wrap .btn-wrap:hover span:before{
+    width: 100%;
+    opacity: 0.2;
+}
